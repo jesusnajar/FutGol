@@ -87,6 +87,11 @@
 		8971C7081B90F2E300539233 /* fondo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7061B90F2E300539233 /* fondo-2.jpg */; };
 		8971C7091B90F2E300539233 /* fondo-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7071B90F2E300539233 /* fondo-1.jpg */; };
 		8971C7F31B92C28300539233 /* noticia_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7F21B92C28300539233 /* noticia_2.jpg */; };
+		8971C7F51B92DF7A00539233 /* cabecera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7F41B92DF7A00539233 /* cabecera.png */; };
+		8971C7F71B92E16100539233 /* cabecera-posiciones.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7F61B92E16100539233 /* cabecera-posiciones.png */; };
+		8971C7F91B92E6EA00539233 /* cabecera-goleadores.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7F81B92E6EA00539233 /* cabecera-goleadores.png */; };
+		8971C7FC1B92EA1700539233 /* cabecera-noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7FA1B92EA1600539233 /* cabecera-noticias.png */; };
+		8971C7FD1B92EA1700539233 /* cabecera-jornadas.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7FB1B92EA1600539233 /* cabecera-jornadas.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +219,11 @@
 		8971C7061B90F2E300539233 /* fondo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fondo-2.jpg"; sourceTree = "<group>"; };
 		8971C7071B90F2E300539233 /* fondo-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fondo-1.jpg"; sourceTree = "<group>"; };
 		8971C7F21B92C28300539233 /* noticia_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noticia_2.jpg; sourceTree = "<group>"; };
+		8971C7F41B92DF7A00539233 /* cabecera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cabecera.png; sourceTree = "<group>"; };
+		8971C7F61B92E16100539233 /* cabecera-posiciones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cabecera-posiciones.png"; sourceTree = "<group>"; };
+		8971C7F81B92E6EA00539233 /* cabecera-goleadores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cabecera-goleadores.png"; sourceTree = "<group>"; };
+		8971C7FA1B92EA1600539233 /* cabecera-noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cabecera-noticias.png"; sourceTree = "<group>"; };
+		8971C7FB1B92EA1600539233 /* cabecera-jornadas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cabecera-jornadas.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +392,11 @@
 		892B25AA1B8DC7C80021F395 /* iconMenu */ = {
 			isa = PBXGroup;
 			children = (
+				8971C7FA1B92EA1600539233 /* cabecera-noticias.png */,
+				8971C7FB1B92EA1600539233 /* cabecera-jornadas.png */,
+				8971C7F81B92E6EA00539233 /* cabecera-goleadores.png */,
+				8971C7F61B92E16100539233 /* cabecera-posiciones.png */,
+				8971C7F41B92DF7A00539233 /* cabecera.png */,
 				892B25AB1B8DC7C80021F395 /* menu.png */,
 				892B25AC1B8DC7C80021F395 /* menu@2x.png */,
 				892B25AD1B8DC7C80021F395 /* menu@3x.png */,
@@ -582,6 +597,7 @@
 				8971C7031B90F2D300539233 /* informacion-color.png in Resources */,
 				892B25E31B8DC7C80021F395 /* posiciones.png in Resources */,
 				892B25E21B8DC7C80021F395 /* planning1.png in Resources */,
+				8971C7F91B92E6EA00539233 /* cabecera-goleadores.png in Resources */,
 				8911C8EC1B8595C100025AEB /* cellNoticias.xib in Resources */,
 				8971C6FD1B90F2C700539233 /* noticias-color.png in Resources */,
 				8971C7011B90F2D300539233 /* jugador-color.png in Resources */,
@@ -590,12 +606,14 @@
 				892B25CD1B8DC7C80021F395 /* menu@3x.png in Resources */,
 				8971C7091B90F2E300539233 /* fondo-1.jpg in Resources */,
 				8971C7081B90F2E300539233 /* fondo-2.jpg in Resources */,
+				8971C7FD1B92EA1700539233 /* cabecera-jornadas.png in Resources */,
 				892B25D51B8DC7C80021F395 /* Morelia.png in Resources */,
 				892B25D01B8DC7C80021F395 /* Atlas.png in Resources */,
 				8971C7051B90F2DB00539233 /* goleadores-color.png in Resources */,
 				892B25E01B8DC7C80021F395 /* goleador.png in Resources */,
 				8971C6FB1B90F2BD00539233 /* posiciones-color.png in Resources */,
 				892B25D61B8DC7C80021F395 /* Necaxa.png in Resources */,
+				8971C7FC1B92EA1700539233 /* cabecera-noticias.png in Resources */,
 				8911C7051B7EB92B00025AEB /* cellGoleadores.xib in Resources */,
 				892B25E71B8DC7C80021F395 /* appicon@3x.png in Resources */,
 				892B25DE1B8DC7C80021F395 /* Tigres.png in Resources */,
@@ -607,9 +625,11 @@
 				8911C66C1B7BDFEA00025AEB /* Main.storyboard in Resources */,
 				892B25E41B8DC7C80021F395 /* scores.png in Resources */,
 				892B25CC1B8DC7C80021F395 /* menu@2x.png in Resources */,
+				8971C7F51B92DF7A00539233 /* cabecera.png in Resources */,
 				892B25CF1B8DC7C80021F395 /* Atlante.png in Resources */,
 				892B25E61B8DC7C80021F395 /* trophy53.png in Resources */,
 				8911C6711B7BDFEA00025AEB /* LaunchScreen.xib in Resources */,
+				8971C7F71B92E16100539233 /* cabecera-posiciones.png in Resources */,
 				892B25E51B8DC7C80021F395 /* triumph.png in Resources */,
 				892B25E91B8DC8790021F395 /* noticia1.jpg in Resources */,
 				8911C66E1B7BDFEA00025AEB /* Images.xcassets in Resources */,

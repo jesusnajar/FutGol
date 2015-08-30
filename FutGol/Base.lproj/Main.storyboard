@@ -252,6 +252,10 @@
                                     <outlet property="delegate" destination="wkI-Tt-k78" id="qNd-ur-b8p"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cabecera-posiciones.png" id="P1f-aN-sFk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -291,7 +295,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="v6f-16-gIe" userLabel="tblMain">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -299,6 +303,10 @@
                                     <outlet property="delegate" destination="TXZ-mw-Frh" id="iaY-8E-B3z"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cabecera-jornadas.png" id="qg3-XK-Hrs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -390,6 +398,10 @@
                                     <outlet property="delegate" destination="4hw-MA-gZA" id="Huf-3k-Olh"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cabecera-goleadores.png" id="gaS-c0-CMl">
+                                <rect key="frame" x="0.0" y="65" width="370" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -429,7 +441,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="Q3f-TX-qpc" userLabel="tblMain">
-                                <rect key="frame" x="0.0" y="65" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="633"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -454,6 +466,9 @@
     </scenes>
     <resources>
         <image name="appicon@3x.png" width="384" height="384"/>
+        <image name="cabecera-goleadores.png" width="360" height="64"/>
+        <image name="cabecera-jornadas.png" width="360" height="64"/>
+        <image name="cabecera-posiciones.png" width="360" height="64"/>
         <image name="goleadores-color.png" width="128" height="128"/>
         <image name="informacion-color.png" width="112" height="128"/>
         <image name="jornadas-color.png" width="128" height="128"/>

@@ -92,6 +92,7 @@
 		8971C7F91B92E6EA00539233 /* cabecera-goleadores.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7F81B92E6EA00539233 /* cabecera-goleadores.png */; };
 		8971C7FC1B92EA1700539233 /* cabecera-noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7FA1B92EA1600539233 /* cabecera-noticias.png */; };
 		8971C7FD1B92EA1700539233 /* cabecera-jornadas.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7FB1B92EA1600539233 /* cabecera-jornadas.png */; };
+		8971C7FF1B93A2BE00539233 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8971C7FE1B93A2BE00539233 /* fondo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +225,7 @@
 		8971C7F81B92E6EA00539233 /* cabecera-goleadores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cabecera-goleadores.png"; sourceTree = "<group>"; };
 		8971C7FA1B92EA1600539233 /* cabecera-noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cabecera-noticias.png"; sourceTree = "<group>"; };
 		8971C7FB1B92EA1600539233 /* cabecera-jornadas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cabecera-jornadas.png"; sourceTree = "<group>"; };
+		8971C7FE1B93A2BE00539233 /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +394,7 @@
 		892B25AA1B8DC7C80021F395 /* iconMenu */ = {
 			isa = PBXGroup;
 			children = (
+				8971C7FE1B93A2BE00539233 /* fondo.png */,
 				8971C7FA1B92EA1600539233 /* cabecera-noticias.png */,
 				8971C7FB1B92EA1600539233 /* cabecera-jornadas.png */,
 				8971C7F81B92E6EA00539233 /* cabecera-goleadores.png */,
@@ -620,6 +623,7 @@
 				8911C7171B7FEB8E00025AEB /* cellDetalleJornada.xib in Resources */,
 				892B25E11B8DC7C80021F395 /* goleadores.png in Resources */,
 				892B25D11B8DC7C80021F395 /* Chivas.png in Resources */,
+				8971C7FF1B93A2BE00539233 /* fondo.png in Resources */,
 				8911C70C1B7FDF7400025AEB /* cellJornadas.xib in Resources */,
 				892B25DA1B8DC7C80021F395 /* Queretaro.png in Resources */,
 				8911C66C1B7BDFEA00025AEB /* Main.storyboard in Resources */,

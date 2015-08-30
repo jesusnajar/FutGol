@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initController]; //carga la función initController
+    
+    
     self.title = @"Noticias";
     
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -36,13 +38,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+
+
 //se agregaron estas lineas
 //Inicia el array
 
 //-------------------------------------------------------------------------------
 - (void)initController {
-        maNoticia             = [[NSMutableArray alloc] initWithObjects: @"Angel",nil];
-        maImgNoticia          = [[NSMutableArray alloc] initWithObjects: @"noticia1.jpg",nil];
+        maNoticia             = [[NSMutableArray alloc] initWithObjects: @"Chivas mas juntos que nunca ",nil];
+        maImgNoticia          = [[NSMutableArray alloc] initWithObjects: @"noticia_2.jpg",nil];
     
 }
 /**********************************************************************************************/
@@ -60,7 +66,13 @@
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 64;
+ /*
+    CGRect frame = tableView.frame;
+    frame.size = tableView.contentSize;
+    tableView.frame = frame; */
+    
+    return 120;//regresa el tamaño
+    
 }
 //-------------------------------------------------------------------------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

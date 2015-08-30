@@ -11,6 +11,8 @@
 @implementation cellJornadas
 
 - (void)awakeFromNib {
+    
+    
     // Initialization code
 }
 

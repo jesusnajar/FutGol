@@ -11,6 +11,10 @@
 		088DB89C1B93A443009E0469 /* TableGoalsDec.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB89B1B93A443009E0469 /* TableGoalsDec.m */; };
 		088DB89F1B93DF06009E0469 /* TablePositionsDec.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB89E1B93DF06009E0469 /* TablePositionsDec.m */; };
 		088DB8A21B93DF20009E0469 /* ParserTablePositions.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB8A11B93DF20009E0469 /* ParserTablePositions.m */; };
+		088DB8A51B93EBB8009E0469 /* NewsDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB8A41B93EBB8009E0469 /* NewsDesc.m */; };
+		088DB8A81B93EBCC009E0469 /* ParserNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB8A71B93EBCC009E0469 /* ParserNews.m */; };
+		088DB8AB1B93F995009E0469 /* MatchesDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB8AA1B93F995009E0469 /* MatchesDesc.m */; };
+		088DB8AE1B93F9B1009E0469 /* ParserMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB8AD1B93F9B1009E0469 /* ParserMatches.m */; };
 		8911C6601B7BDFEA00025AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8911C65F1B7BDFEA00025AEB /* main.m */; };
 		8911C6631B7BDFEA00025AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8911C6621B7BDFEA00025AEB /* AppDelegate.m */; };
 		8911C6661B7BDFEA00025AEB /* FutGol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8911C6641B7BDFEA00025AEB /* FutGol.xcdatamodeld */; };
@@ -118,6 +122,14 @@
 		088DB89E1B93DF06009E0469 /* TablePositionsDec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TablePositionsDec.m; sourceTree = "<group>"; };
 		088DB8A01B93DF20009E0469 /* ParserTablePositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserTablePositions.h; sourceTree = "<group>"; };
 		088DB8A11B93DF20009E0469 /* ParserTablePositions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTablePositions.m; sourceTree = "<group>"; };
+		088DB8A31B93EBB8009E0469 /* NewsDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDesc.h; sourceTree = "<group>"; };
+		088DB8A41B93EBB8009E0469 /* NewsDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDesc.m; sourceTree = "<group>"; };
+		088DB8A61B93EBCC009E0469 /* ParserNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserNews.h; sourceTree = "<group>"; };
+		088DB8A71B93EBCC009E0469 /* ParserNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserNews.m; sourceTree = "<group>"; };
+		088DB8A91B93F995009E0469 /* MatchesDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchesDesc.h; sourceTree = "<group>"; };
+		088DB8AA1B93F995009E0469 /* MatchesDesc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchesDesc.m; sourceTree = "<group>"; };
+		088DB8AC1B93F9B1009E0469 /* ParserMatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserMatches.h; sourceTree = "<group>"; };
+		088DB8AD1B93F9B1009E0469 /* ParserMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserMatches.m; sourceTree = "<group>"; };
 		8911C65A1B7BDFEA00025AEB /* FutGol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutGol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8911C65E1B7BDFEA00025AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8911C65F1B7BDFEA00025AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -384,6 +396,14 @@
 				088DB89E1B93DF06009E0469 /* TablePositionsDec.m */,
 				088DB8A01B93DF20009E0469 /* ParserTablePositions.h */,
 				088DB8A11B93DF20009E0469 /* ParserTablePositions.m */,
+				088DB8A31B93EBB8009E0469 /* NewsDesc.h */,
+				088DB8A41B93EBB8009E0469 /* NewsDesc.m */,
+				088DB8A61B93EBCC009E0469 /* ParserNews.h */,
+				088DB8A71B93EBCC009E0469 /* ParserNews.m */,
+				088DB8A91B93F995009E0469 /* MatchesDesc.h */,
+				088DB8AA1B93F995009E0469 /* MatchesDesc.m */,
+				088DB8AC1B93F9B1009E0469 /* ParserMatches.h */,
+				088DB8AD1B93F9B1009E0469 /* ParserMatches.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -692,7 +712,10 @@
 				8911C6CD1B7CF18C00025AEB /* GoleadoresViewController.m in Sources */,
 				088DB8A21B93DF20009E0469 /* ParserTablePositions.m in Sources */,
 				8911C7161B7FEB8E00025AEB /* cellDetalleJornada.m in Sources */,
+				088DB8AB1B93F995009E0469 /* MatchesDesc.m in Sources */,
+				088DB8AE1B93F9B1009E0469 /* ParserMatches.m in Sources */,
 				8911C6691B7BDFEA00025AEB /* ViewController.m in Sources */,
+				088DB8A81B93EBCC009E0469 /* ParserNews.m in Sources */,
 				8911C68F1B7BE0EE00025AEB /* MainViewController.m in Sources */,
 				088DB89C1B93A443009E0469 /* TableGoalsDec.m in Sources */,
 				8911C68C1B7BE0C400025AEB /* SidebarTableViewController.m in Sources */,
@@ -703,6 +726,7 @@
 				8911C6601B7BDFEA00025AEB /* main.m in Sources */,
 				8911C6C71B7CEE1E00025AEB /* PosicionesViewController.m in Sources */,
 				8911C8EB1B8595C100025AEB /* cellNoticias.m in Sources */,
+				088DB8A51B93EBB8009E0469 /* NewsDesc.m in Sources */,
 				8971C6F61B90F28500539233 /* SBJsonStreamWriterState.m in Sources */,
 				8971C6F81B90F28500539233 /* SBJsonUTF8Stream.m in Sources */,
 				088DB8991B93A37C009E0469 /* ParserTableGoals.m in Sources */,

@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsDesc.h"
+#import "ParserNews.h"
 
 @interface MainViewController : UIViewController
+
+@property (nonatomic,strong)    NewsDesc            *NewsDes;
+@property (nonatomic,strong)    ParserNews         *ParserNews;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 

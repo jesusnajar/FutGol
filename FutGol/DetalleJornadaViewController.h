@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MatchesDesc.h"
 
 @interface DetalleJornadaViewController : UIViewController
 

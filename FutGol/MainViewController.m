@@ -19,6 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    mstNewsTitle = [[NSMutableArray alloc] init];
+    mstNewsImg = [[NSMutableArray alloc] init];
+    mstNewsContent = [[NSMutableArray alloc] init];
+    [self initData];
     [self initController]; //carga la función initController
     
     
@@ -38,6 +42,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)initData {
+    NSMutableArray *jsonResponse = [NewsDesc getNews];
+    [ParserNews parseNews:jsonResponse];
+}
 
 
 
@@ -61,7 +69,7 @@
 //-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return maNoticia.count;
+    return mstNewsTitle.count;
 }
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,17 +95,95 @@
     }
     //Fill cell with info from arrays
     tableView.rowHeight = 100;
-    cell.lblNoticia.text   = maNoticia[indexPath.row];
-    cell.imgNoticia.image = [UIImage imageNamed: maImgNoticia[indexPath.row]];
+    cell.lblNoticia.text   = mstNewsContent[indexPath.row];
+    
+    NSData *imageData = [self dataFromBase64EncodedString:mstNewsImg[indexPath.row]];
+    UIImage *imgNews = [UIImage imageWithData:imageData];
+    
+    imgNews = [self imageWithImage:imgNews scaledToSize: CGSizeMake(50, 50)];
+    
+    cell.imgNoticia.image = imgNews;
     
     
     return cell;
     
 }
+
+-(NSData *)dataFromBase64EncodedString:(NSString *)string{
+    if (string.length > 0) {
+        
+        //the iPhone has base 64 decoding built in but not obviously. The trick is to
+        //create a data url that's base 64 encoded and ask an NSData to load it.
+        NSString *data64URLString = [NSString stringWithFormat:@"data:;base64,%@", string];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:data64URLString]];
+        return data;
+    }
+    return nil;
+}
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+- (UIImage*)imageWithImage:(UIImage*)image
+              scaledToSize:(CGSize)targetSize;
+
+{
+    UIImage *sourceImage = image;
+    UIImage *newImage = nil;
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    
+    if (CGSizeEqualToSize(imageSize, targetSize) == NO)
+    {
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        
+        if (widthFactor > heightFactor) {
+            scaleFactor = widthFactor; // scale to fit height
+        }
+        else{
+            scaleFactor = heightFactor; // scale to fit width
+        }
+        scaledWidth  = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        
+        // center the image
+        if (widthFactor > heightFactor)
+        {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+        }
+        else
+            if (widthFactor < heightFactor)
+            {
+                thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+            }
+    }
+    
+    UIGraphicsBeginImageContext(targetSize); // this will crop
+    
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width  = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    if(newImage == nil)
+        NSLog(@"could not scale image");
+    
+    //pop the context to get back to the default
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 

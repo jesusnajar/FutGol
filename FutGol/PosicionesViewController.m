@@ -58,15 +58,6 @@
 
 //-------------------------------------------------------------------------------
 - (void)initController {
-    maPosicion            = [[NSMutableArray alloc] initWithObjects: @"1", @"2",@"3", @"4",@"5",@"6",@"7",@"8",@"9",@"10",nil];
-    maEquipos             = [[NSMutableArray alloc] initWithObjects: @"Guadalajara", @"Morelia", @"Pumas", @"Atlas", @"America", @"Pachuca", @"Tigres", @"Cruz Azul",@"Santos",@"Puebla",nil];
-    maImgsEquipos         = [[NSMutableArray alloc] initWithObjects: @"Chivas.png", @"Morelia.png", @"Pumas.png", @"Atlas.png", @"America.png", @"Pachuca.png", @"Tigres.png", @"Cruz azul.png",@"Santos.png",@"Puebla.png",nil];
-    
-    maPuntos              = [[NSMutableArray alloc] initWithObjects: @"10", @"9",@"9", @"8",@"8",@"7",@"6",@"5",@"4",@"2",nil];
-    maJugados             = [[NSMutableArray alloc] initWithObjects: @"4", @"4",@"4",@"4",@"4",@"4",@"4",@"4",@"4",@"4",nil];
-    maGanados             = [[NSMutableArray alloc] initWithObjects: @"3", @"3",@"3",@"2",@"2",@"2",@"2",@"1",@"1",@"0",nil];
-    maEmpatados             = [[NSMutableArray alloc] initWithObjects: @"1", @"0",@"0",@"2",@"2",@"1",@"0",@"2",@"1",@"2",nil];
-    maPerdidos             = [[NSMutableArray alloc] initWithObjects: @"0", @"0",@"0",@"0",@"0",@"0",@"0",@"1",@"2",@"2",nil];
     
 
 }

@@ -62,7 +62,7 @@
 //-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return maEquipoLocal.count;
+    return mstNumbers.count;
 }
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,13 +83,21 @@
     //Fill cell with info from arrays
  
     
-    cell.lblEquipoLocal.text         =maEquipoLocal[indexPath.row];
-    cell.lblGolesLocal.text          =maGolesLocal[indexPath.row];
-    cell.imgEquipoLocal.image        = [UIImage imageNamed: maImgEquipoLocal[indexPath.row]];
+    cell.lblEquipoLocal.text         =mstLocalName[indexPath.row];
+    cell.lblGolesLocal.text          =mstLocalGoals[indexPath.row];
     
-    cell.lblEquipoVisitante.text     =maEquipoVisitante[indexPath.row];
-    cell.imgEquipoVisitante.image    = [UIImage imageNamed: maImgEquipoVisitante[indexPath.row]];
-    cell.lblGolesVisitante.text      =maGolesVisitante[indexPath.row];
+    NSData *imgData = [self dataFromBase64EncodedString:mstLocalLogo[indexPath.row]];
+    UIImage *localLogo = [UIImage imageWithData:imgData];
+    
+    cell.imgEquipoLocal.image        = localLogo;
+    
+    cell.lblEquipoVisitante.text     =mstForeignName[indexPath.row];
+    
+    NSData *imageData = [self dataFromBase64EncodedString:mstForeignLogo[indexPath.row]];
+    UIImage *foreignLogo = [UIImage imageWithData:imageData];
+    
+    cell.imgEquipoVisitante.image    = foreignLogo;
+    cell.lblGolesVisitante.text      =mstForeignGoals[indexPath.row];
     
     cell.lblEquipoLocal.adjustsFontSizeToFitWidth = YES;
     cell.lblEquipoVisitante.adjustsFontSizeToFitWidth = YES;
@@ -98,6 +106,19 @@
     return cell;
     
 }
+
+-(NSData *)dataFromBase64EncodedString:(NSString *)string{
+    if (string.length > 0) {
+        
+        //the iPhone has base 64 decoding built in but not obviously. The trick is to
+        //create a data url that's base 64 encoded and ask an NSData to load it.
+        NSString *data64URLString = [NSString stringWithFormat:@"data:;base64,%@", string];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:data64URLString]];
+        return data;
+    }
+    return nil;
+}
+
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

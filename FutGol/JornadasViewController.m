@@ -20,6 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    mstNumbers = [[NSMutableArray alloc] init];
+    mstForeignGoals = [[NSMutableArray alloc] init];
+    mstForeignLogo = [[NSMutableArray alloc] init];
+    mstForeignName = [[NSMutableArray alloc] init];
+    mstLocalGoals = [[NSMutableArray alloc] init];
+    mstLocalLogo = [[NSMutableArray alloc] init];
+    mstLocalName = [[NSMutableArray alloc] init];
+    [self initData];
     [self initController]; //carga la función initController
     self.title = @"Jornadas";
     
@@ -40,13 +48,14 @@
 
 
 //Inicia el array
+- (void)initData {
+    NSMutableArray *jsonResponse = [MatchesDesc getMatches];
+    [ParserMatches parseMatches:jsonResponse];
+}
 
 //-------------------------------------------------------------------------------
 - (void)initController {
-    
-    maJornada           = [[NSMutableArray alloc] initWithObjects: @"Jornada  1", @"Jornada  2",@"Jornada  3", @"Jornada  4",@"Jornada  5",@"Jornada  6",@"Jornada  7",@"Jornada  8",nil];
-    
-    maEstatusJornada    = [[NSMutableArray alloc] initWithObjects: @"Jugada", @"Jugada",@"Jugada", @"Jugada",@"En Proceso",@"Proxima",@"Proxima",@"Proxima",nil];
+
 }
 /**********************************************************************************************/
 #pragma mark - Table source and delegate methods
@@ -58,7 +67,7 @@
 //-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return maJornada.count;
+    return mstNumbers.count;
 }
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,8 +88,8 @@
     }
     //Fill cell with info from arrays
     
-    cell.lblJornada.text          =maJornada[indexPath.row];
-    cell.lblEstatusJornada.text          =maEstatusJornada[indexPath.row];
+    cell.lblJornada.text          = [@"Jornada " stringByAppendingString:mstNumbers[indexPath.row]];
+    cell.lblEstatusJornada.text          =@"Jugada";
     
     
     return cell;

@@ -100,8 +100,6 @@
     NSData *imageData = [self dataFromBase64EncodedString:mstNewsImg[indexPath.row]];
     UIImage *imgNews = [UIImage imageWithData:imageData];
     
-    imgNews = [self imageWithImage:imgNews scaledToSize: CGSizeMake(50, 50)];
-    
     cell.imgNoticia.image = imgNews;
     
     

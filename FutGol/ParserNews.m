@@ -18,9 +18,9 @@
             NSString * team = [json objectAtIndex:i];
             NSData *data = [team dataUsingEncoding:NSUTF16StringEncoding];
             id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            [mstNewsContent addObject:[json valueForKey: @"title"]];
-            [mstNewsImg addObject:[json valueForKey: @"content"]];
-            [mstNewsTitle addObject:[json valueForKey: @"photo"]];
+            [mstNewsContent addObject:[json valueForKey: @"content"]];
+            [mstNewsImg addObject:[json valueForKey: @"photo"]];
+            [mstNewsTitle addObject:[json valueForKey: @"title"]];
         }
     }
 }

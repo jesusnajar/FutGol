@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088DB8991B93A37C009E0469 /* ParserTableGoals.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB8981B93A37C009E0469 /* ParserTableGoals.m */; };
+		088DB89C1B93A443009E0469 /* TableGoalsDec.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB89B1B93A443009E0469 /* TableGoalsDec.m */; };
+		088DB89F1B93DF06009E0469 /* TablePositionsDec.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB89E1B93DF06009E0469 /* TablePositionsDec.m */; };
+		088DB8A21B93DF20009E0469 /* ParserTablePositions.m in Sources */ = {isa = PBXBuildFile; fileRef = 088DB8A11B93DF20009E0469 /* ParserTablePositions.m */; };
 		8911C6601B7BDFEA00025AEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8911C65F1B7BDFEA00025AEB /* main.m */; };
 		8911C6631B7BDFEA00025AEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8911C6621B7BDFEA00025AEB /* AppDelegate.m */; };
 		8911C6661B7BDFEA00025AEB /* FutGol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8911C6641B7BDFEA00025AEB /* FutGol.xcdatamodeld */; };
@@ -105,6 +109,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		088DB8971B93A37C009E0469 /* ParserTableGoals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserTableGoals.h; sourceTree = "<group>"; };
+		088DB8981B93A37C009E0469 /* ParserTableGoals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTableGoals.m; sourceTree = "<group>"; };
+		088DB89A1B93A443009E0469 /* TableGoalsDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableGoalsDec.h; sourceTree = "<group>"; };
+		088DB89B1B93A443009E0469 /* TableGoalsDec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableGoalsDec.m; sourceTree = "<group>"; };
+		088DB89D1B93DF06009E0469 /* TablePositionsDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TablePositionsDec.h; sourceTree = "<group>"; };
+		088DB89E1B93DF06009E0469 /* TablePositionsDec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TablePositionsDec.m; sourceTree = "<group>"; };
+		088DB8A01B93DF20009E0469 /* ParserTablePositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserTablePositions.h; sourceTree = "<group>"; };
+		088DB8A11B93DF20009E0469 /* ParserTablePositions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTablePositions.m; sourceTree = "<group>"; };
 		8911C65A1B7BDFEA00025AEB /* FutGol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutGol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8911C65E1B7BDFEA00025AEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8911C65F1B7BDFEA00025AEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -362,6 +374,14 @@
 				8911C6AA1B7C321100025AEB /* StatisticsViewController.m */,
 				8911C6D41B7D834100025AEB /* Declarations.h */,
 				8911C6D51B7D834100025AEB /* Declarations.m */,
+				088DB8971B93A37C009E0469 /* ParserTableGoals.h */,
+				088DB8981B93A37C009E0469 /* ParserTableGoals.m */,
+				088DB89A1B93A443009E0469 /* TableGoalsDec.h */,
+				088DB89B1B93A443009E0469 /* TableGoalsDec.m */,
+				088DB89D1B93DF06009E0469 /* TablePositionsDec.h */,
+				088DB89E1B93DF06009E0469 /* TablePositionsDec.m */,
+				088DB8A01B93DF20009E0469 /* ParserTablePositions.h */,
+				088DB8A11B93DF20009E0469 /* ParserTablePositions.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -658,6 +678,7 @@
 				8971C6F11B90F28500539233 /* SBJsonStreamParserAccumulator.m in Sources */,
 				8971C6F71B90F28500539233 /* SBJsonTokeniser.m in Sources */,
 				8911C69D1B7BEE7100025AEB /* SWRevealViewController.m in Sources */,
+				088DB89F1B93DF06009E0469 /* TablePositionsDec.m in Sources */,
 				8911C6CA1B7CF13000025AEB /* JornadasViewController.m in Sources */,
 				8911C6661B7BDFEA00025AEB /* FutGol.xcdatamodeld in Sources */,
 				8911C6D21B7D7F2800025AEB /* CellPosiciones.m in Sources */,
@@ -665,9 +686,11 @@
 				8971C6F41B90F28500539233 /* SBJsonStreamWriter.m in Sources */,
 				8911C6631B7BDFEA00025AEB /* AppDelegate.m in Sources */,
 				8911C6CD1B7CF18C00025AEB /* GoleadoresViewController.m in Sources */,
+				088DB8A21B93DF20009E0469 /* ParserTablePositions.m in Sources */,
 				8911C7161B7FEB8E00025AEB /* cellDetalleJornada.m in Sources */,
 				8911C6691B7BDFEA00025AEB /* ViewController.m in Sources */,
 				8911C68F1B7BE0EE00025AEB /* MainViewController.m in Sources */,
+				088DB89C1B93A443009E0469 /* TableGoalsDec.m in Sources */,
 				8911C68C1B7BE0C400025AEB /* SidebarTableViewController.m in Sources */,
 				8911C6D61B7D834100025AEB /* Declarations.m in Sources */,
 				8911C71A1B7FF46300025AEB /* DetalleJornadaViewController.m in Sources */,
@@ -678,6 +701,7 @@
 				8911C8EB1B8595C100025AEB /* cellNoticias.m in Sources */,
 				8971C6F61B90F28500539233 /* SBJsonStreamWriterState.m in Sources */,
 				8971C6F81B90F28500539233 /* SBJsonUTF8Stream.m in Sources */,
+				088DB8991B93A37C009E0469 /* ParserTableGoals.m in Sources */,
 				8911C6AB1B7C321100025AEB /* StatisticsViewController.m in Sources */,
 				8971C6EE1B90F28500539233 /* NSObject+SBJson.m in Sources */,
 				8911C7041B7EB92B00025AEB /* cellGoleadores.m in Sources */,

@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableGoalsDec.h"
+#import "ParserTableGoals.h"
 
 @interface GoleadoresViewController : UIViewController
+@property (nonatomic,strong)    TableGoalsDec            *TableGoalsDes;
+@property (nonatomic,strong)    ParserTableGoals         *ParserTableGoals;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

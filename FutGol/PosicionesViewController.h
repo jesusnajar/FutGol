@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TablePositionsDec.h"
+#import "ParserTablePositions.h"
 
 @interface PosicionesViewController : UIViewController
+@property (nonatomic,strong)    TablePositionsDec            *TablePositionsDesc;
+@property (nonatomic,strong)    ParserTablePositions         *ParserTablePositions;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

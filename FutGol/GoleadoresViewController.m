@@ -20,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    mstPlayerPhoto = [[NSMutableArray alloc] init];
+    mstPlayerName = [[NSMutableArray alloc] init];
+    mstPlayerTeam = [[NSMutableArray alloc] init];
+    mstPlayerGoals = [[NSMutableArray alloc] init];
+    [self initData];
     [self initController]; //carga la función initController
     self.title = @"Goleadores";
     
@@ -41,15 +46,14 @@
 
 //Inicia el array
 
+- (void)initData {
+    NSMutableArray *jsonResponse = [TableGoalsDec getTableGoals];
+    [ParserTableGoals parseTableGoals:jsonResponse];
+}
+
 //-------------------------------------------------------------------------------
 - (void)initController {
     
-    maNombreGoleador            = [[NSMutableArray alloc] initWithObjects: @"Jesus", @"Cristian",@"Brian", @"Diego",@"Brayant",nil];
-    maEquipo             = [[NSMutableArray alloc] initWithObjects: @"Guadalajara", @"Morelia", @"Guadalajara", @"Atlas", @"America",nil];
-    maGoles             = [[NSMutableArray alloc] initWithObjects: @"10", @"4", @"3", @"3", @"2",nil];
-    
-    maimgGoleador             = [[NSMutableArray alloc] initWithObjects: @"jugador-color.png", @"jugador-color.png", @"jugador-color.png", @"jugador-color.png", @"jugador-color.png",nil];
-   // maimgEquipo             = [[NSMutableArray alloc] initWithObjects: @"Chivas.png", @"Pumas.png", @"Chivas.png", @"Atlas.png", @"America.png",nil];
     
 }
 /**********************************************************************************************/
@@ -62,7 +66,7 @@
 //-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return maNombreGoleador.count;
+    return mstPlayerName.count;
 }
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,13 +85,15 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"cellGoleadores"];
     }
     //Fill cell with info from arrays
-   
-    cell.lblNombreGoleador.text   = maNombreGoleador[indexPath.row];
-    cell.lblEquipo.text           = maEquipo[indexPath.row];
-    cell.lblGoles.text            = maGoles[indexPath.row];
+
+    cell.lblNombreGoleador.text   = mstPlayerName[indexPath.row];
+    cell.lblEquipo.text           = mstPlayerTeam[indexPath.row];
+    cell.lblGoles.text            = mstPlayerGoals[indexPath.row];
     
-    cell.imgGoleador.image = [UIImage imageNamed: maimgGoleador[indexPath.row]];
-   // cell.imgEquipo.image   = [UIImage imageNamed: maimgEquipo[indexPath.row]];
+    NSData *imageData = [self dataFromBase64EncodedString:mstPlayerPhoto[indexPath.row]];
+    UIImage *playerPhoto = [UIImage imageWithData:imageData];
+    
+    cell.imgGoleador.image = playerPhoto;
 
     return cell;
     
@@ -96,6 +102,18 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+}
+
+-(NSData *)dataFromBase64EncodedString:(NSString *)string{
+    if (string.length > 0) {
+        
+        //the iPhone has base 64 decoding built in but not obviously. The trick is to
+        //create a data url that's base 64 encoded and ask an NSData to load it.
+        NSString *data64URLString = [NSString stringWithFormat:@"data:;base64,%@", string];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:data64URLString]];
+        return data;
+    }
+    return nil;
 }
 
 

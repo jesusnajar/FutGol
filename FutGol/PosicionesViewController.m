@@ -20,6 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    mstTeamWons = [[NSMutableArray alloc] init];
+    mstTeamPoints = [[NSMutableArray alloc] init];
+    mstTeamLost = [[NSMutableArray alloc] init];
+    mstTeamLogo = [[NSMutableArray alloc] init];
+    mstTeamName = [[NSMutableArray alloc] init];
+    mstTeamGoalsFavor = [[NSMutableArray alloc] init];
+    mstTeamGoalsAgainst = [[NSMutableArray alloc] init];
+    mstTeamGames = [[NSMutableArray alloc] init];
+    mstTeamDrawns = [[NSMutableArray alloc] init];
+    [self initData];
     [self initController]; //carga la función initController
     self.title = @"Posiciones";
     
@@ -40,6 +50,11 @@
 }
 
 //Inicia el array
+
+- (void)initData {
+    NSMutableArray *jsonResponse = [TablePositionsDec getTablePositions];
+    [ParserTablePositions parseTablePositions:jsonResponse];
+}
 
 //-------------------------------------------------------------------------------
 - (void)initController {
@@ -65,7 +80,7 @@
 //-------------------------------------------------------------------------------
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return maEquipos.count;
+    return mstTeamGames.count;
 }
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,17 +99,33 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"CellPosiciones"];
     }
     //Fill cell with info from arrays
-    cell.lblPosicion.text  =maPosicion[indexPath.row];
-    cell.lblEquipos.text   = maEquipos[indexPath.row];
-    cell.imgsEquipos.image = [UIImage imageNamed: maImgsEquipos[indexPath.row]];
-    cell.lblPuntos.text   = maPuntos[indexPath.row];
-    cell.lblJugados.text  = maJugados[indexPath.row];
-    cell.lblGanados.text  = maGanados[indexPath.row];
-    cell.lblEmpatados.text= maEmpatados[indexPath.row];
-    cell.lblPerdidos.text = maPerdidos[indexPath.row];
+    cell.lblPosicion.text  = [NSString stringWithFormat:@"%ld",(long)indexPath.row + 1];
+    cell.lblEquipos.text   = mstTeamName[indexPath.row];
+    
+    NSData *imageData = [self dataFromBase64EncodedString:mstTeamLogo[indexPath.row]];
+    UIImage *teamLogo = [UIImage imageWithData:imageData];
+    
+    cell.imgsEquipos.image = teamLogo;
+    cell.lblPuntos.text   = mstTeamPoints[indexPath.row];
+    cell.lblJugados.text  = mstTeamGames[indexPath.row];
+    cell.lblGanados.text  = mstTeamWons[indexPath.row];
+    cell.lblEmpatados.text= mstTeamDrawns[indexPath.row];
+    cell.lblPerdidos.text = mstTeamLost[indexPath.row];
     
     return cell;
     
+}
+
+-(NSData *)dataFromBase64EncodedString:(NSString *)string{
+    if (string.length > 0) {
+        
+        //the iPhone has base 64 decoding built in but not obviously. The trick is to
+        //create a data url that's base 64 encoded and ask an NSData to load it.
+        NSString *data64URLString = [NSString stringWithFormat:@"data:;base64,%@", string];
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:data64URLString]];
+        return data;
+    }
+    return nil;
 }
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
